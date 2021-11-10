@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "name": "Dome Pendant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "95.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/17.1.jpg?v=1594630184"
+    },
+    {
+      "id": 2,
+      "name": "Novelty Pendant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "78.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/16.1.jpg?v=1594628699"
+    },
+    {
+      "id": 3,
+      "name": "Cohen 1-Light Dome Pendant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "96.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/15.1.jpg?v=1594627256"
+    },
+    {
+      "id": 4,
+      "name": "Single Pendant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "22.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/14.1.jpg?v=1594625403"
+    },
+    {
+      "id": 5,
+      "name": "Polyester Empire Lamp",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "33.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/11.1.jpg?v=1594615520"
+    },
+    {
+      "id": 6,
+      "name": "Light Drum Pendant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "78.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/13.1.jpg?v=1594624914"
+    },
+    {
+      "id": 7,
+      "name": "Cotton Novelty Pendant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "35.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/12.1.jpg?v=1594616410"
+    },
+    {
+      "id": 8,
+      "name": "Mcgee Desk Lamp",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "45.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/6.1.jpg?v=1594611885"
+    },
+    {
+      "id": 9,
+      "name": "Tripod Table Lamp",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "75.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/4.1.jpg?v=1594607525"
+    },
+    {
+      "id": 10,
+      "name": "Novelty Table Lamp",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloremque itaque animi adipisci ipsa culpa. Voluptate asperiores, similique, dolor laborum recusandae et numquam neque unde eius quisquam natus illo veritatis.",
+      "price": "65.00",
+      "img": "https://cdn.shopify.com/s/files/1/0432/0791/7732/products/2.1.jpg?v=1594606617"
+    }
+  ]
