@@ -1,5 +1,4 @@
 import React from 'react';
-import MoreItems from '../../MoreItems/MoreItems';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
 

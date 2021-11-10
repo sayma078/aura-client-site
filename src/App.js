@@ -4,6 +4,7 @@ import Header from './Pages/Shared/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import MoreItems from './Pages/MoreItem/MoreItems/MoreItems';
+import Explore from './Pages/Explore/Explore';
 
 function App() {
   return (
@@ -14,11 +15,14 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route exact path="/home">
+          <Route  path="/home">
             <Home></Home>
           </Route>
-          <Route exact path="/moreItems">
+          <Route  path="/moreItems">
             <MoreItems></MoreItems>
+          </Route>
+          <Route path="/explore/:id">
+            <Explore></Explore>
           </Route>
         </Switch>
         <Footer></Footer>
