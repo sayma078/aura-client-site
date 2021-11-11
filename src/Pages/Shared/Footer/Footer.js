@@ -20,9 +20,10 @@ const Footer = () => {
                </div>
        <div>
        <h1>Newsletter</h1>
+       <p>Be the first who learns about our
+great promotions!</p>
         <p>Subscribe to our mailing list</p>
-        <h4><i className="fab fa-facebook-square"></i> <i className="fab fa-twitter-square"></i> <i className="fab fa-instagram-square"></i></h4>
-        <small>AncoraThemes © 2021. All Rights Reserved.</small>
+        <p>AncoraThemes © 2021. All Rights Reserved.</p>
        </div>
     </div>
     </div>

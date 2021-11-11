@@ -13,7 +13,7 @@ const Banner = () => {
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner">cdcd
     <div class="carousel-item active">
       <img src={banner1} class="d-block w-100 b-img" alt="..."/>
     </div>
