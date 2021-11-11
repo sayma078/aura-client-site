@@ -43,8 +43,11 @@ const Header = () => {
               <Link className="nav-link text-white" to="/moreItems">
                 More Items
               </Link>
+              { loginUser?.email && <Link class="nav-link text-white" to="/addProduct">
+              Add Service
+              </Link>}
               {loginUser?.email ? (
-                <Link onClick={handleLogout} className="nav-link text-white" as={Link} to="/login">
+                <Link onClick={handleLogout} className="nav-link text-white" as={Link} to="#">
                   logOut {""}
                   {loginUser?.displayName}
                 </Link>

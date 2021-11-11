@@ -9,6 +9,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import AddProduct from './Pages/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/explore/:id">
             <Explore></Explore>
+          </Route>
+          <Route path="/addProduct">
+            <AddProduct></AddProduct>
           </Route>
           <Route path="*">
               <NotFound></NotFound>
