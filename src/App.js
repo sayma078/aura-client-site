@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import AddProduct from './Pages/AddProduct/AddProduct';
+import ManageProduct from './Pages/ManageProduct/ManageProduct';
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path="/addProduct">
             <AddProduct></AddProduct>
+          </Route>
+          <Route path="/manageProduct">
+            <ManageProduct></ManageProduct>
           </Route>
           <Route path="*">
               <NotFound></NotFound>
