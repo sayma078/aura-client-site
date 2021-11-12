@@ -27,7 +27,7 @@ const Location = () => {
           <h2>
             <i className="fas fa-phone-square-alt text-primary"></i>
           </h2>
-          <h3>Book By Phone</h3>
+          <h3>Order By Phone</h3>
           <p className="card-text">415-205-5550 405-222-5551</p>
         </div>
 

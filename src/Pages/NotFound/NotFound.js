@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import notfound from '../../images/404.png';
+import notFound from '../../images/notFound.png';
 
 const NotFound = () => {
     return (
         <div>
-        <img style={{ width: "100%", height: "550px" }} src={notfound} alt="" />
+        <img style={{ width: "100%", height: "550px" }} src={notFound} alt="" />
         <Link to="/">
           {" "}
-          <button className="bg-warning mt-3">Go Back</button>
+          <button className=" btn btn-success mt-3">Go Back</button>
         </Link>
       </div>
     );

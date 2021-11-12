@@ -17,18 +17,32 @@ const ManageProduct = () => {
         .then(data => {
             if(data)
             {
-                alert("Are you sure to delete??")
+                alert("Are you want to delete??")
             }
         });
     };
     return (
-        <div>
-            <h2>manage all product</h2>
-            {
-            manageProducts.map((product) => <div className="d-flex justify-content-center m-1 "><h4>{product?.name}</h4>
-            <button  className="btn btn-warning ms-3 " key={product._id} onClick={() => handleDelete(product?._id)}>DELETE</button>
-              </div>
-            )}
+        
+        <div className="container">
+           <h2>Manage Products</h2>
+           <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {manageProducts.map((product) => (
+            <tr>
+              <td>{product?._id}</td>
+              <td>{product?.name}</td>
+              <td><button className="btn btn-warning" onClick={()=>handleDelete(product?._id)}>< i className="far fa-trash-alt"></i></button></td>
+            </tr>
+          ))} 
+          </tbody>
+          </table>
         </div>
     );
 };

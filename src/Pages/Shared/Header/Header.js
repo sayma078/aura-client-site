@@ -19,7 +19,7 @@ const Header = () => {
         <div>
        <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
         <div className="container-fluid">
-          <Link className="navbar-brand text-warning fw-bold" to="/"> <i class="far fa-lightbulb "></i> AURA
+          <Link className="navbar-brand  text-warning fw-bold" to="/"> <i class="far fa-lightbulb "></i> AURA 
           </Link>
           <button
             className="navbar-toggler"
@@ -48,6 +48,9 @@ const Header = () => {
               </Link>}
               { loginUser?.email && <Link class="nav-link text-white" to="/manageProduct">
               Manage Products
+              </Link>}
+              { loginUser?.email && <Link class="nav-link text-white" to="/orders">
+              Manage Order
               </Link>}
               {loginUser?.email ? (
                 <Link onClick={handleLogout} className="nav-link text-white" as={Link} to="#">

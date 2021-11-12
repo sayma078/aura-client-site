@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const MoreItem = (props) => {
     const {product} = props;
-    const{id, name, img,price, description}= product;
+    const{_id, name, img,cost, description}= product;
     return (
         <div className="col-md-6 g-3  ">
         <div >
           <img src={img} className="card-img-top p-3 image" alt="..." />
           <div className="card-body">
-            <h5 className="card-title text-primary">{name}</h5>
+            <h3 className="card-title text-primary">{name}</h3>
             <p className="card-text">{description.slice(0,110)}...</p>
-            <p>${price}</p>
+            <h5>${cost}</h5>
             <br />
-            <Link as={Link} to={`/explore/${id}`}><button className="btn btn-warning">Explore</button></Link>
+            <Link as={Link} to={`/explore/${_id}`}><button className="btn btn-warning">Explore</button></Link>
           </div>
         </div>
       </div>

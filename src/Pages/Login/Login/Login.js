@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
+import { useHistory, useLocation } from "react-router";
 import initializeAuthentication from "../Firebase/firebase.init";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider";
@@ -15,6 +15,11 @@ const Login = () => {
       const [success, setSuccess] = useState("");
       const [errorMsg, setErrorMsg] = useState("");
       const [loginUser, setLoginUser] = useContext(AuthContext);
+
+      const history = useHistory();
+  const location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
+
       const getInputValue = (e) => {
         const getValue = { ...user };
         getValue[e.target.name] = e.target.value;
@@ -27,6 +32,7 @@ const Login = () => {
             .then((userCredential) => {
               const user = userCredential.user;
               setLoginUser(user);
+              history.replace(from);
               setSuccess("Login success");
               setErrorMsg("");
             })

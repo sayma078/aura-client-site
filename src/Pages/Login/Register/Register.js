@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from 'react-router-dom';
+import { useHistory, useLocation } from "react-router";
 import initializeAuthentication from '../Firebase/firebase.init';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Context/AuthProvider';
 
 
  initializeAuthentication();
@@ -16,6 +19,12 @@ const Register = () => {
 
       const [success, setSuccess] = useState('');
       const [errorMsg, setErrorMsg] = useState('');
+      const [loginUser, setLoginUser] = useContext(AuthContext);
+
+      const history = useHistory();
+      const location = useLocation();
+      let { from } = location.state || { from: { pathname: "/" } };
+
       const getInputValue = (e) => {
         const getValue = { ...user };
         getValue[e.target.name] = e.target.value;
@@ -27,6 +36,8 @@ const Register = () => {
             createUserWithEmailAndPassword(auth, user.email, user.password, user.name)
               .then((userCredential) => {
                 const user = userCredential.user;
+                setLoginUser(user);
+                history.replace(from);
                 setSuccess('Register success')
                 setErrorMsg('');
               })

@@ -11,6 +11,9 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ManageProduct from './Pages/ManageProduct/ManageProduct';
+import ManageOrder from './Pages/ManageOrder/ManageOrder';
+import Purches from './Pages/Purches/Purches';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -35,15 +38,21 @@ function App() {
           <Route  path="/moreItems">
             <MoreItems></MoreItems>
           </Route>
-          <Route path="/explore/:id">
+          <PrivateRoute path="/explore/:id">
             <Explore></Explore>
-          </Route>
+          </PrivateRoute>
           <Route path="/addProduct">
             <AddProduct></AddProduct>
           </Route>
           <Route path="/manageProduct">
             <ManageProduct></ManageProduct>
           </Route>
+          <Route path="/orders">
+            <ManageOrder></ManageOrder>
+          </Route>
+          <PrivateRoute path="/purches/:id">
+            <Purches></Purches>
+          </PrivateRoute>
           <Route path="*">
               <NotFound></NotFound>
             </Route>
