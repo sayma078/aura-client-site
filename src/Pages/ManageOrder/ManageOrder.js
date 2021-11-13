@@ -5,7 +5,7 @@ import ManageOrderStatus from './ManageOrderStatus';
 
 const ManageOrder = () => {
     const [manageOrder, setManageOrder] =useState([]);
-    console.log(manageOrder);
+    // console.log(manageOrder);
     useEffect(() =>{
         fetch('http://localhost:5000/orders')
         .then(res => res.json())

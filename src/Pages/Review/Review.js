@@ -2,16 +2,18 @@ import axios from 'axios';
 import React from 'react';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Review = () => {
     const [loginUser, setLoginUser] = useContext(AuthContext);
+    const history = useHistory();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     axios.post("http://localhost:5000/review", data).then((res) => {
       if (res.data.insertedId) {
-        alert("add successfully");
+        alert(`add successfully ${history.push("/home")}`);
         reset();
       }
     });

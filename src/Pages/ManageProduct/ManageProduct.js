@@ -7,7 +7,7 @@ const ManageProduct = () => {
         .then(res => res.json())
         .then(data => setManageProducts(data));
     },[manageProducts])
-    console.log(manageProducts);
+    // console.log(manageProducts);
     const handleDelete =(id) => {
         const url = `http://localhost:5000/deleteProducts/${id}`;
         fetch(url, {
@@ -25,7 +25,7 @@ const ManageProduct = () => {
         
         <div className="container">
            <h2>Manage Products</h2>
-           <table className="table">
+           <table className="table text-center">
         <thead>
           <tr>
             <th scope="col">Id</th>
