@@ -5,6 +5,7 @@ import ManageOrderStatus from './ManageOrderStatus';
 
 const ManageOrder = () => {
     const [manageOrder, setManageOrder] =useState([]);
+    console.log(manageOrder);
     useEffect(() =>{
         fetch('http://localhost:5000/orders')
         .then(res => res.json())
@@ -18,7 +19,8 @@ const ManageOrder = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log('delete successfully', data);
+          if(data)
+          { alert('Are you sure to delete??')}
         })
     }
     return (
