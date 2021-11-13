@@ -1,18 +1,25 @@
-import React from "react";
+import React ,{useState,useContext, useEffect} from "react";
+import { AuthContext } from "../../../Context/AuthProvider";
 import AddProduct from "../../AddProduct/AddProduct";
 import MakeAdmin from "../../MakeAdmin/MakeAdmin";
-
-
 import ManageOrder from "../../ManageOrder/ManageOrder";
 import ManageProduct from "../../ManageProduct/ManageProduct";
 import MyOrder from "../../MyOrder/MyOrder";
 import Review from "../../Review/Review";
 
 const DashBoardPage = () => {
+  const [admin, setAdmin] = useState([]);
+  const [loginUser, setLoginUser] = useContext(AuthContext);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/admin?email=" + loginUser.email)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data));
+  }, []);
   return (
     <div>
       <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
+        {admin[0]?.email && <li class="nav-item" role="presentation">
           <button
             class="nav-link active"
             id="addProduct-tab"
@@ -25,8 +32,8 @@ const DashBoardPage = () => {
           >
            Add Product
           </button>
-        </li>
-        <li class="nav-item" role="presentation">
+        </li>}
+        { admin[0]?.email && <li class="nav-item" role="presentation">
           <button
             class="nav-link"
             id="manageProducts-tab"
@@ -39,8 +46,8 @@ const DashBoardPage = () => {
           >
             Manage Products
           </button>
-        </li>
-        <li class="nav-item" role="presentation">
+        </li>}
+        {admin[0]?.email && <li class="nav-item" role="presentation">
           <button
             class="nav-link"
             id="manageOrder-tab"
@@ -53,7 +60,7 @@ const DashBoardPage = () => {
           >
             Manage Order
           </button>
-        </li>
+        </li>}
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
@@ -68,7 +75,7 @@ const DashBoardPage = () => {
             My Order
           </button>
         </li>
-        <li class="nav-item" role="presentation">
+        {admin[0]?.email && <li class="nav-item" role="presentation">
           <button
             class="nav-link"
             id="MakeAdmin-tab"
@@ -81,7 +88,7 @@ const DashBoardPage = () => {
           >
             Make Admin
           </button>
-        </li>
+        </li>}
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
@@ -98,46 +105,46 @@ const DashBoardPage = () => {
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
-        <div
+        {admin[0]?.email && <div
           class="tab-pane fade show active"
           id="addProduct"
           role="tabpanel"
           aria-labelledby="addProduct-tab"
         >
           <AddProduct></AddProduct>
-        </div>
-        <div
+        </div>}
+        {admin[0]?.email && <div
           class="tab-pane fade"
           id="manageProducts"
           role="tabpanel"
           aria-labelledby="manageProducts-tab"
         >
           <ManageProduct></ManageProduct>
-        </div>
-        <div
+        </div>}
+        {admin[0]?.email && <div
           class="tab-pane fade"
           id="manageOrder"
           role="tabpanel"
           aria-labelledby="manageOrder-tab"
         >
         <ManageOrder></ManageOrder>
-        </div>
+        </div>}
         <div
-          class="tab-pane fade"
+          class={`tab-pane fade ${admin[0]?.email ?? "show active" }`}
           id="myOrder"
           role="tabpanel"
           aria-labelledby="myOrder-tab"
         >
         <MyOrder></MyOrder>
         </div>
-        <div
+        {admin[0]?.email && <div
           class="tab-pane fade"
           id="MakeAdmin"
           role="tabpanel"
           aria-labelledby="MakeAdmin-tab"
         >
         <MakeAdmin></MakeAdmin>
-        </div>
+        </div>}
         <div
           class="tab-pane fade"
           id="review"

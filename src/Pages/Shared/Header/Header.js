@@ -52,7 +52,7 @@ const Header = () => {
               {/* { loginUser?.email && <Link class="nav-link text-white" to="/orders">
               Manage Order
               </Link>} */}
-               { loginUser?.email &&<Link class="nav-link text-white" to="/dashboard">
+               { loginUser?.email && <Link class="nav-link text-white" to="/dashboard">
               DashBoard
               </Link>}
               {loginUser?.email ? (

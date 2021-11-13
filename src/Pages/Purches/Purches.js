@@ -39,9 +39,7 @@ const Purches = () => {
     axios.post("http://localhost:5000/orders", orderData).then((res) => {
       if (res.data.insertedId) {
         alert(
-          `booking successfully. Please review this product ${history.push(
-            "/review"
-          )}`
+          `booking successfully. Please review this product. ${history.push("/review")}`
         );
       }
     });
