@@ -7,14 +7,14 @@ const ManageOrder = () => {
     const [manageOrder, setManageOrder] =useState([]);
     // console.log(manageOrder);
     useEffect(() =>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://salty-citadel-46472.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setManageOrder(data));
     },[manageOrder]);
     // console.log(manageOrder);
     const handleDeleteOrder = (id) => {
         // console.log(id);
-        fetch(`http://localhost:5000/deletePerches/${id}`,{
+        fetch(`https://salty-citadel-46472.herokuapp.com/deletePerches/${id}`,{
             method:"DELETE",
         })
         .then(res => res.json())

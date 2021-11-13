@@ -8,7 +8,7 @@ const Explore = () => {
     // const {name,img, cost, time, description} = explore;
     const [explore, setExplore] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://salty-citadel-46472.herokuapp.com/products/${id}`)
           .then((res) => res.json())
           .then((data) => setExplore(data));
       }, []);

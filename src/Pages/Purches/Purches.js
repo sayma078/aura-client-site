@@ -14,7 +14,7 @@ const Purches = () => {
 
 //   console.log(details);
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://salty-citadel-46472.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -36,7 +36,7 @@ const Purches = () => {
       purchesStatus: "pending",
     };
     console.log(orderData);
-    axios.post("http://localhost:5000/orders", orderData).then((res) => {
+    axios.post("https://salty-citadel-46472.herokuapp.com/orders", orderData).then((res) => {
       if (res.data.insertedId) {
         alert(
           `booking successfully. Please review this product. ${history.push("/review")}`

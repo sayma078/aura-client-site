@@ -8,7 +8,7 @@ const ManageOrderStatus = ({status, purchesId}) => {
 
     const updateStatus = data;
     const updateData = { ...updateStatus, purchesId };
-    fetch("http://localhost:5000/updateStatus/" + purchesId, {
+    fetch("https://salty-citadel-46472.herokuapp.com/updateStatus/" + purchesId, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateData),
