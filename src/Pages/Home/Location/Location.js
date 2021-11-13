@@ -3,7 +3,7 @@ import React from 'react';
 const Location = () => {
     return (
         <div className="container  ">
-      <h2 className="mt-5 text-warning">Location</h2>
+      <h2 className="text-warning text-center fst-italic fw-bold m-5 ">Location</h2>
       <div className="mt-5 row  d-flex justify-content-center">
         <div className="card-body col-md-3 ">
           <h2>

@@ -43,14 +43,17 @@ const Header = () => {
               <Link className="nav-link text-white" to="/moreItems">
                 More Items
               </Link>
-              { loginUser?.email && <Link class="nav-link text-white" to="/addProduct">
+              {/* { loginUser?.email && <Link class="nav-link text-white" to="/addProduct">
               Add Product
               </Link>}
               { loginUser?.email && <Link class="nav-link text-white" to="/manageProduct">
               Manage Products
-              </Link>}
-              { loginUser?.email && <Link class="nav-link text-white" to="/orders">
+              </Link>} */}
+              {/* { loginUser?.email && <Link class="nav-link text-white" to="/orders">
               Manage Order
+              </Link>} */}
+               { loginUser?.email &&<Link class="nav-link text-white" to="/dashboard">
+              DashBoard
               </Link>}
               {loginUser?.email ? (
                 <Link onClick={handleLogout} className="nav-link text-white" as={Link} to="#">

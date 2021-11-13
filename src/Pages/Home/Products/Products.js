@@ -12,7 +12,7 @@ const Products = () => {
     }, []);
     return (
         <div className="mt-5">
-      <h2 className="text-warning ">Our Products</h2>
+      <h2 className="text-warning text-center fst-italic fw-bold m-5 ">Our Products</h2>
      <div className="container">
      <div className="row">
         {products.slice(0,6).map((product) => (

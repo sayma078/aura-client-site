@@ -14,7 +14,7 @@ const MoreItems = () => {
 
     return (
         <div className="mt-5">
-        <h2 className="text-warning ">All Products</h2>
+       <h2 className="text-warning text-center fst-italic fw-bold m-5 ">All Product</h2>
        <div className="container">
        <div className="row">
           {products.map((product) => (
